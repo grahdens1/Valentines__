@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Chatbot 💖</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffeff1;
+            text-align: center;
+            padding: 20px;
+        }
+        .chatbox {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            text-align: left;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 15px;
+            margin: 8px 0;
+            display: inline-block;
+            font-size: 16px;
+            max-width: 80%;
+        }
+        .bot {
+            background: #ff85a2;
+            color: white;
+            align-self: flex-start;
+        }
+        .user {
+            background: #7fc8f8;
+            color: white;
+            align-self: flex-end;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            width: 90%;
+            max-width: 300px;
+            padding: 12px;
+            margin: 6px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+        .yes-btn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .yes-btn:hover {
+            background-color: #e63e5c;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>💬 Valentine's Chatbot 💖</h2>
+
+    <div class="chatbox">
+        <div class="message bot">Hey love! 💕</div>
+        <div class="message bot">I have a very important question for you... 🤭</div>
+        <div class="message bot">Will you be my Valentine's date? 🥰</div>
+        <div class="buttons">
+            <button class="yes-btn" onclick="yesResponse()">Absolutely! I wouldn’t miss it ❤️</button>
+            <button class="yes-btn" onclick="funnyYes()">Hmm… let me think… Okay, but you owe me chocolates 🍫😘</button>
+        </div>
+    </div>
+
+    <script>
+        function yesResponse() {
+            document.querySelector(".chatbox").innerHTML = `
+                <div class="message bot">Aww! I can’t wait! 🥰</div>
+                <div class="message bot">See you on the 14th! 🌹</div>
+            `;
+        }
+
+        function funnyYes() {
+            document.querySelector(".chatbox").innerHTML = `
+                <div class="message bot">Deal! But I’m getting extra hugs in return! 🤗💕</div>
+                <div class="message bot">It’s a date! 😘</div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
